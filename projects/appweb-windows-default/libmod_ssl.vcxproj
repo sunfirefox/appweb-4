@@ -13,7 +13,11 @@
   </ItemDefinitionGroup>
 
   <PropertyGroup Label="Globals">
+<<<<<<< HEAD
     <ProjectGuid>{67b51044-c97a-4039-bf30-d90ff1b944a6}</ProjectGuid>
+=======
+    <ProjectGuid>{ac052168-0694-452d-8785-6be53e86c78f}</ProjectGuid>
+>>>>>>> upstream/stable
     <RootNamespace />
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -112,14 +116,22 @@
 
 <ItemGroup>
   <ProjectReference Include="libappweb.vcxproj">
+<<<<<<< HEAD
   <Project>6f3faad3-bfea-4af7-b4d9-514e9e44ad75</Project>
+=======
+  <Project>f26c83ba-b70a-4123-97dd-0bc68b7e6b87</Project>
+>>>>>>> upstream/stable
   <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
   </ProjectReference>
 </ItemGroup>
 
 <ItemGroup>
   <ProjectReference Include="libmprssl.vcxproj">
+<<<<<<< HEAD
   <Project>f9ce73ad-00f6-4db5-9965-81d549f70e8e</Project>
+=======
+  <Project>6e7b083d-3204-4d8d-a9d1-7c68fb923c69</Project>
+>>>>>>> upstream/stable
   <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
   </ProjectReference>
 </ItemGroup>

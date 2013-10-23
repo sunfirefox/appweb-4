@@ -3,7 +3,11 @@
 #
 
 PRODUCT            := appweb
+<<<<<<< HEAD
 VERSION            := 4.4.3
+=======
+VERSION            := 4.4.2
+>>>>>>> upstream/stable
 BUILD_NUMBER       := 0
 PROFILE            := default
 ARCH               := $(shell uname -m | sed 's/i.86/x86/;s/x86_64/x64/;s/arm.*/arm/;s/mips.*/mips/')
@@ -301,7 +305,11 @@ clobber: clean
 #   version
 #
 version: $(DEPS_1)
+<<<<<<< HEAD
 	@echo 4.4.3-0
+=======
+	@echo 4.4.2-0
+>>>>>>> upstream/stable
 
 #
 #   mpr.h
@@ -2168,7 +2176,11 @@ installBinary: $(DEPS_93)
 	mkdir -p "$(BIT_CACHE_PREFIX)"
 	mkdir -p "$(BIT_APP_PREFIX)"
 	rm -f "$(BIT_APP_PREFIX)/latest"
+<<<<<<< HEAD
 	ln -s "4.4.3" "$(BIT_APP_PREFIX)/latest"
+=======
+	ln -s "4.4.2" "$(BIT_APP_PREFIX)/latest"
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_LOG_PREFIX)"
 	chmod 755 "$(BIT_LOG_PREFIX)"
 	[ `id -u` = 0 ] && chown $(WEB_USER):$(WEB_GROUP) "$(BIT_LOG_PREFIX)"; true
@@ -2248,6 +2260,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/angular/client/lib/angular/version.txt $(BIT_VAPP_PREFIX)/esp/components/angular/client/lib/angular/version.txt
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular"
 	cp src/esp/proto/components/angular/config.json $(BIT_VAPP_PREFIX)/esp/components/angular/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp"
 	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/esp-click.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/esp-click.js
 	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/esp-confirm.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/esp-confirm.js
@@ -2264,6 +2277,24 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/esp.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/esp.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp"
 	cp src/esp/proto/components/angular-esp/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-esp/config.json
+=======
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext"
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-field-errors.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-field-errors.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-format.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-format.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-input-group.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-input-group.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-input.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-input.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-titlecase.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-titlecase.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/Esp.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/Esp.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp"
+	cp src/esp/proto/components/angular-esp/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-esp/config.json
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-extras"
+	cp src/esp/proto/components/angular-extras/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-extras/config.json
+	cp src/esp/proto/components/angular-extras/misc.js $(BIT_VAPP_PREFIX)/esp/components/angular-extras/misc.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-local/client/lib/angular-local/ext"
+	cp src/esp/proto/components/angular-local/client/lib/angular-local/ext/LocalStore.js $(BIT_VAPP_PREFIX)/esp/components/angular-local/client/lib/angular-local/ext/LocalStore.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-local"
+	cp src/esp/proto/components/angular-local/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-local/config.json
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-mvc/client/app"
 	cp src/esp/proto/components/angular-mvc/client/app/main.js $(BIT_VAPP_PREFIX)/esp/components/angular-mvc/client/app/main.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-mvc/client/css"
@@ -2278,6 +2309,13 @@ ifeq ($(BIT_PACK_ESP),1)
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-mvc"
 	cp src/esp/proto/components/angular-mvc/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-mvc/config.json
 	cp src/esp/proto/components/angular-mvc/start.bit $(BIT_VAPP_PREFIX)/esp/components/angular-mvc/start.bit
+<<<<<<< HEAD
+=======
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-session/client/lib/angular-session/ext"
+	cp src/esp/proto/components/angular-session/client/lib/angular-session/ext/SessionStore.js $(BIT_VAPP_PREFIX)/esp/components/angular-session/client/lib/angular-session/ext/SessionStore.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-session"
+	cp src/esp/proto/components/angular-session/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-session/config.json
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-ui-bootstrap/client/lib/angular-ui-bootstrap"
 	cp src/esp/proto/components/angular-ui-bootstrap/client/lib/angular-ui-bootstrap/ui-bootstrap-tpls.js $(BIT_VAPP_PREFIX)/esp/components/angular-ui-bootstrap/client/lib/angular-ui-bootstrap/ui-bootstrap-tpls.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-ui-bootstrap"
@@ -2341,6 +2379,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/bootstrap/client/lib/bootstrap/less/wells.less $(BIT_VAPP_PREFIX)/esp/components/bootstrap/client/lib/bootstrap/less/wells.less
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/bootstrap"
 	cp src/esp/proto/components/bootstrap/config.json $(BIT_VAPP_PREFIX)/esp/components/bootstrap/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/d3/client/lib/d3"
 	cp src/esp/proto/components/d3/client/lib/d3/d3.v3.js $(BIT_VAPP_PREFIX)/esp/components/d3/client/lib/d3/d3.v3.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/d3"
@@ -2366,6 +2405,8 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/flot/client/lib/flot/jquery.js $(BIT_VAPP_PREFIX)/esp/components/flot/client/lib/flot/jquery.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/flot"
 	cp src/esp/proto/components/flot/config.json $(BIT_VAPP_PREFIX)/esp/components/flot/config.json
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/css"
 	cp src/esp/proto/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.css $(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.css
 	cp src/esp/proto/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.min.css $(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.min.css
@@ -2399,6 +2440,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/font-awesome/client/lib/font-awesome/scss/font-awesome.scss $(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/scss/font-awesome.scss
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/font-awesome"
 	cp src/esp/proto/components/font-awesome/config.json $(BIT_VAPP_PREFIX)/esp/components/font-awesome/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html-mvc/client/app"
 	cp src/esp/proto/components/html-mvc/client/app/main.js $(BIT_VAPP_PREFIX)/esp/components/html-mvc/client/app/main.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html-mvc/client/css"
@@ -2413,6 +2455,8 @@ ifeq ($(BIT_PACK_ESP),1)
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html-mvc"
 	cp src/esp/proto/components/html-mvc/config.json $(BIT_VAPP_PREFIX)/esp/components/html-mvc/config.json
 	cp src/esp/proto/components/html-mvc/start.bit $(BIT_VAPP_PREFIX)/esp/components/html-mvc/start.bit
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html5shiv/client/lib/html5shiv"
 	cp src/esp/proto/components/html5shiv/client/lib/html5shiv/html5shiv.js $(BIT_VAPP_PREFIX)/esp/components/html5shiv/client/lib/html5shiv/html5shiv.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html5shiv"
@@ -2459,12 +2503,15 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/normalize/client/css/normalize.less $(BIT_VAPP_PREFIX)/esp/components/normalize/client/css/normalize.less
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/normalize"
 	cp src/esp/proto/components/normalize/config.json $(BIT_VAPP_PREFIX)/esp/components/normalize/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3"
 	cp src/esp/proto/components/nvd3/client/lib/nvd3/nv.d3.css $(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3/nv.d3.css
 	cp src/esp/proto/components/nvd3/client/lib/nvd3/nv.d3.js $(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3/nv.d3.js
 	cp src/esp/proto/components/nvd3/client/lib/nvd3/nv.d3.min.css $(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3/nv.d3.min.css
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/nvd3"
 	cp src/esp/proto/components/nvd3/config.json $(BIT_VAPP_PREFIX)/esp/components/nvd3/config.json
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/respond/client/lib/respond"
 	cp src/esp/proto/components/respond/client/lib/respond/respond.js $(BIT_VAPP_PREFIX)/esp/components/respond/client/lib/respond/respond.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/respond"
@@ -2473,6 +2520,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/server/app.conf $(BIT_VAPP_PREFIX)/esp/components/server/app.conf
 	cp src/esp/proto/components/server/appweb.conf $(BIT_VAPP_PREFIX)/esp/components/server/appweb.conf
 	cp src/esp/proto/components/server/config.json $(BIT_VAPP_PREFIX)/esp/components/server/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/xcharts/client/lib/xcharts"
 	cp src/esp/proto/components/xcharts/client/lib/xcharts/xcharts.css $(BIT_VAPP_PREFIX)/esp/components/xcharts/client/lib/xcharts/xcharts.css
 	cp src/esp/proto/components/xcharts/client/lib/xcharts/xcharts.js $(BIT_VAPP_PREFIX)/esp/components/xcharts/client/lib/xcharts/xcharts.js
@@ -2481,15 +2529,21 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/xcharts/config.json $(BIT_VAPP_PREFIX)/esp/components/xcharts/config.json
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/angular-mvc"
 	cp src/esp/proto/templates/angular-mvc/controller-singleton.c $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/controller-singleton.c
+=======
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/angular-mvc"
+>>>>>>> upstream/stable
 	cp src/esp/proto/templates/angular-mvc/controller.c $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/controller.c
 	cp src/esp/proto/templates/angular-mvc/controller.js $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/controller.js
 	cp src/esp/proto/templates/angular-mvc/edit.html $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/edit.html
 	cp src/esp/proto/templates/angular-mvc/list.html $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/list.html
 	cp src/esp/proto/templates/angular-mvc/model.js $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/model.js
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/html-mvc"
 	cp src/esp/proto/templates/html-mvc/controller.c $(BIT_VAPP_PREFIX)/esp/templates/html-mvc/controller.c
 	cp src/esp/proto/templates/html-mvc/edit.esp $(BIT_VAPP_PREFIX)/esp/templates/html-mvc/edit.esp
 	cp src/esp/proto/templates/html-mvc/list.esp $(BIT_VAPP_PREFIX)/esp/templates/html-mvc/list.esp
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/legacy-mvc"
 	cp src/esp/proto/templates/legacy-mvc/controller.c $(BIT_VAPP_PREFIX)/esp/templates/legacy-mvc/controller.c
 	cp src/esp/proto/templates/legacy-mvc/edit.html $(BIT_VAPP_PREFIX)/esp/templates/legacy-mvc/edit.html

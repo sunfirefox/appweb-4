@@ -13,7 +13,11 @@
   </ItemDefinitionGroup>
 
   <PropertyGroup Label="Globals">
+<<<<<<< HEAD
     <ProjectGuid>{1b04b6fb-9199-47bb-8960-9e5d4c9c922e}</ProjectGuid>
+=======
+    <ProjectGuid>{0272d641-cd02-44d2-a517-f69692cc12e6}</ProjectGuid>
+>>>>>>> upstream/stable
     <RootNamespace />
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

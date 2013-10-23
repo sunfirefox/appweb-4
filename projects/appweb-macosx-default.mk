@@ -3,7 +3,11 @@
 #
 
 PRODUCT            := appweb
+<<<<<<< HEAD
 VERSION            := 4.4.3
+=======
+VERSION            := 4.4.2
+>>>>>>> upstream/stable
 BUILD_NUMBER       := 0
 PROFILE            := default
 ARCH               := $(shell uname -m | sed 's/i.86/x86/;s/x86_64/x64/;s/arm.*/arm/;s/mips.*/mips/')
@@ -301,7 +305,11 @@ clobber: clean
 #   version
 #
 version: $(DEPS_1)
+<<<<<<< HEAD
 	@echo 4.4.3-0
+=======
+	@echo 4.4.2-0
+>>>>>>> upstream/stable
 
 #
 #   mpr.h
@@ -349,7 +357,11 @@ DEPS_6 += $(CONFIG)/obj/mprLib.o
 
 $(CONFIG)/bin/libmpr.dylib: $(DEPS_6)
 	@echo '      [Link] $(CONFIG)/bin/libmpr.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libmpr.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmpr.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/mprLib.o" $(LIBS) 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libmpr.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmpr.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/mprLib.o" $(LIBS) 
+>>>>>>> upstream/stable
 
 #
 #   est.h
@@ -382,7 +394,11 @@ DEPS_9 += $(CONFIG)/obj/estLib.o
 
 $(CONFIG)/bin/libest.dylib: $(DEPS_9)
 	@echo '      [Link] $(CONFIG)/bin/libest.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libest.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libest.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/estLib.o" $(LIBS) 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libest.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libest.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/estLib.o" $(LIBS) 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -435,7 +451,11 @@ endif
 
 $(CONFIG)/bin/libmprssl.dylib: $(DEPS_11)
 	@echo '      [Link] $(CONFIG)/bin/libmprssl.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libmprssl.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS)    -install_name @rpath/libmprssl.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/mprSsl.o" $(LIBPATHS_11) $(LIBS_11) $(LIBS_11) $(LIBS) 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libmprssl.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS)    -install_name @rpath/libmprssl.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/mprSsl.o" $(LIBPATHS_11) $(LIBS_11) $(LIBS_11) $(LIBS) 
+>>>>>>> upstream/stable
 
 #
 #   manager.o
@@ -530,7 +550,11 @@ DEPS_19 += $(CONFIG)/obj/pcre.o
 
 $(CONFIG)/bin/libpcre.dylib: $(DEPS_19)
 	@echo '      [Link] $(CONFIG)/bin/libpcre.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libpcre.dylib -arch $(CC_ARCH) $(LDFLAGS) -compatibility_version 4.4.3 -current_version 4.4.3 $(LIBPATHS) -install_name @rpath/libpcre.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/pcre.o" $(LIBS) 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libpcre.dylib -arch $(CC_ARCH) $(LDFLAGS) -compatibility_version 4.4.2 -current_version 4.4.2 $(LIBPATHS) -install_name @rpath/libpcre.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/pcre.o" $(LIBS) 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -576,7 +600,11 @@ endif
 
 $(CONFIG)/bin/libhttp.dylib: $(DEPS_22)
 	@echo '      [Link] $(CONFIG)/bin/libhttp.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libhttp.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libhttp.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/httpLib.o" $(LIBPATHS_22) $(LIBS_22) $(LIBS_22) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libhttp.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libhttp.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/httpLib.o" $(LIBPATHS_22) $(LIBS_22) $(LIBS_22) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 
 #
 #   http.o
@@ -644,9 +672,15 @@ DEPS_27 += $(CONFIG)/inc/sqlite3.h
 DEPS_27 += $(CONFIG)/inc/bit.h
 DEPS_27 += $(CONFIG)/obj/sqlite3.o
 
+<<<<<<< HEAD
 $(CONFIG)/bin/libsql.dylib: $(DEPS_27)
 	@echo '      [Link] $(CONFIG)/bin/libsql.dylib'
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libsql.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libsql.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/sqlite3.o" $(LIBS) 
+=======
+$(CONFIG)/bin/libsqlite3.dylib: $(DEPS_27)
+	@echo '      [Link] $(CONFIG)/bin/libsqlite3.dylib'
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libsqlite3.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libsqlite3.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/sqlite3.o" $(LIBS) 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -796,7 +830,11 @@ endif
 
 $(CONFIG)/bin/libappweb.dylib: $(DEPS_38)
 	@echo '      [Link] $(CONFIG)/bin/libappweb.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libappweb.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libappweb.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/config.o" "$(CONFIG)/obj/convenience.o" "$(CONFIG)/obj/dirHandler.o" "$(CONFIG)/obj/fileHandler.o" "$(CONFIG)/obj/log.o" "$(CONFIG)/obj/server.o" $(LIBPATHS_38) $(LIBS_38) $(LIBS_38) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libappweb.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libappweb.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/config.o" "$(CONFIG)/obj/convenience.o" "$(CONFIG)/obj/dirHandler.o" "$(CONFIG)/obj/fileHandler.o" "$(CONFIG)/obj/log.o" "$(CONFIG)/obj/server.o" $(LIBPATHS_38) $(LIBS_38) $(LIBS_38) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 
 #
 #   edi.h
@@ -967,7 +1005,11 @@ endif
 
 $(CONFIG)/bin/libmod_esp.dylib: $(DEPS_50)
 	@echo '      [Link] $(CONFIG)/bin/libmod_esp.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_esp.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmod_esp.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/edi.o" "$(CONFIG)/obj/espAbbrev.o" "$(CONFIG)/obj/espFramework.o" "$(CONFIG)/obj/espHandler.o" "$(CONFIG)/obj/espHtml.o" "$(CONFIG)/obj/espTemplate.o" "$(CONFIG)/obj/mdb.o" "$(CONFIG)/obj/sdb.o" $(LIBPATHS_50) $(LIBS_50) $(LIBS_50) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_esp.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmod_esp.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/edi.o" "$(CONFIG)/obj/espAbbrev.o" "$(CONFIG)/obj/espFramework.o" "$(CONFIG)/obj/espHandler.o" "$(CONFIG)/obj/espHtml.o" "$(CONFIG)/obj/espTemplate.o" "$(CONFIG)/obj/mdb.o" "$(CONFIG)/obj/sdb.o" $(LIBPATHS_50) $(LIBS_50) $(LIBS_50) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -1412,7 +1454,11 @@ endif
 
 $(CONFIG)/bin/libejs.dylib: $(DEPS_60)
 	@echo '      [Link] $(CONFIG)/bin/libejs.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libejs.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libejs.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/ejsLib.o" $(LIBPATHS_60) $(LIBS_60) $(LIBS_60) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libejs.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libejs.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/ejsLib.o" $(LIBPATHS_60) $(LIBS_60) $(LIBS_60) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -1593,7 +1639,11 @@ endif
 
 $(CONFIG)/bin/libmod_cgi.dylib: $(DEPS_67)
 	@echo '      [Link] $(CONFIG)/bin/libmod_cgi.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_cgi.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmod_cgi.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/cgiHandler.o" $(LIBPATHS_67) $(LIBS_67) $(LIBS_67) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_cgi.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmod_cgi.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/cgiHandler.o" $(LIBPATHS_67) $(LIBS_67) $(LIBS_67) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -1653,7 +1703,11 @@ endif
 
 $(CONFIG)/bin/libmod_ejs.dylib: $(DEPS_69)
 	@echo '      [Link] $(CONFIG)/bin/libmod_ejs.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_ejs.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmod_ejs.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/ejsHandler.o" $(LIBPATHS_69) $(LIBS_69) $(LIBS_69) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_ejs.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libmod_ejs.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/ejsHandler.o" $(LIBPATHS_69) $(LIBS_69) $(LIBS_69) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -1706,7 +1760,11 @@ LIBPATHS_71 += -L$(BIT_PACK_PHP_PATH)/libs
 
 $(CONFIG)/bin/libmod_php.dylib: $(DEPS_71)
 	@echo '      [Link] $(CONFIG)/bin/libmod_php.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_php.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS)  -install_name @rpath/libmod_php.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/phpHandler.o" $(LIBPATHS_71) $(LIBS_71) $(LIBS_71) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_php.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS)  -install_name @rpath/libmod_php.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/phpHandler.o" $(LIBPATHS_71) $(LIBS_71) $(LIBS_71) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -1784,7 +1842,11 @@ endif
 
 $(CONFIG)/bin/libmod_ssl.dylib: $(DEPS_73)
 	@echo '      [Link] $(CONFIG)/bin/libmod_ssl.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_ssl.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS)    -install_name @rpath/libmod_ssl.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/sslModule.o" $(LIBPATHS_73) $(LIBS_73) $(LIBS_73) $(LIBS) -lpam 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libmod_ssl.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS)    -install_name @rpath/libmod_ssl.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/sslModule.o" $(LIBPATHS_73) $(LIBS_73) $(LIBS_73) $(LIBS) -lpam 
+>>>>>>> upstream/stable
 endif
 
 #
@@ -1885,7 +1947,11 @@ DEPS_80 += $(CONFIG)/obj/slink.o
 
 $(CONFIG)/bin/libslink.dylib: $(DEPS_80)
 	@echo '      [Link] $(CONFIG)/bin/libslink.dylib'
+<<<<<<< HEAD
 	$(CC) -dynamiclib -o $(CONFIG)/bin/libslink.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libslink.dylib -compatibility_version 4.4.3 -current_version 4.4.3 "$(CONFIG)/obj/slink.o" $(LIBS) 
+=======
+	$(CC) -dynamiclib -o $(CONFIG)/bin/libslink.dylib -arch $(CC_ARCH) $(LDFLAGS) $(LIBPATHS) -install_name @rpath/libslink.dylib -compatibility_version 4.4.2 -current_version 4.4.2 "$(CONFIG)/obj/slink.o" $(LIBS) 
+>>>>>>> upstream/stable
 
 #
 #   appweb.o
@@ -2168,7 +2234,11 @@ installBinary: $(DEPS_93)
 	mkdir -p "$(BIT_CACHE_PREFIX)"
 	mkdir -p "$(BIT_APP_PREFIX)"
 	rm -f "$(BIT_APP_PREFIX)/latest"
+<<<<<<< HEAD
 	ln -s "4.4.3" "$(BIT_APP_PREFIX)/latest"
+=======
+	ln -s "4.4.2" "$(BIT_APP_PREFIX)/latest"
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_LOG_PREFIX)"
 	chmod 755 "$(BIT_LOG_PREFIX)"
 	[ `id -u` = 0 ] && chown $(WEB_USER):$(WEB_GROUP) "$(BIT_LOG_PREFIX)"; true
@@ -2248,6 +2318,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/angular/client/lib/angular/version.txt $(BIT_VAPP_PREFIX)/esp/components/angular/client/lib/angular/version.txt
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular"
 	cp src/esp/proto/components/angular/config.json $(BIT_VAPP_PREFIX)/esp/components/angular/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp"
 	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/esp-click.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/esp-click.js
 	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/esp-confirm.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/esp-confirm.js
@@ -2264,6 +2335,24 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/esp.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/esp.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp"
 	cp src/esp/proto/components/angular-esp/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-esp/config.json
+=======
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext"
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-field-errors.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-field-errors.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-format.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-format.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-input-group.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-input-group.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-input.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-input.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/esp-titlecase.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/esp-titlecase.js
+	cp src/esp/proto/components/angular-esp/client/lib/angular-esp/ext/Esp.js $(BIT_VAPP_PREFIX)/esp/components/angular-esp/client/lib/angular-esp/ext/Esp.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-esp"
+	cp src/esp/proto/components/angular-esp/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-esp/config.json
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-extras"
+	cp src/esp/proto/components/angular-extras/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-extras/config.json
+	cp src/esp/proto/components/angular-extras/misc.js $(BIT_VAPP_PREFIX)/esp/components/angular-extras/misc.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-local/client/lib/angular-local/ext"
+	cp src/esp/proto/components/angular-local/client/lib/angular-local/ext/LocalStore.js $(BIT_VAPP_PREFIX)/esp/components/angular-local/client/lib/angular-local/ext/LocalStore.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-local"
+	cp src/esp/proto/components/angular-local/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-local/config.json
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-mvc/client/app"
 	cp src/esp/proto/components/angular-mvc/client/app/main.js $(BIT_VAPP_PREFIX)/esp/components/angular-mvc/client/app/main.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-mvc/client/css"
@@ -2278,6 +2367,13 @@ ifeq ($(BIT_PACK_ESP),1)
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-mvc"
 	cp src/esp/proto/components/angular-mvc/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-mvc/config.json
 	cp src/esp/proto/components/angular-mvc/start.bit $(BIT_VAPP_PREFIX)/esp/components/angular-mvc/start.bit
+<<<<<<< HEAD
+=======
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-session/client/lib/angular-session/ext"
+	cp src/esp/proto/components/angular-session/client/lib/angular-session/ext/SessionStore.js $(BIT_VAPP_PREFIX)/esp/components/angular-session/client/lib/angular-session/ext/SessionStore.js
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-session"
+	cp src/esp/proto/components/angular-session/config.json $(BIT_VAPP_PREFIX)/esp/components/angular-session/config.json
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-ui-bootstrap/client/lib/angular-ui-bootstrap"
 	cp src/esp/proto/components/angular-ui-bootstrap/client/lib/angular-ui-bootstrap/ui-bootstrap-tpls.js $(BIT_VAPP_PREFIX)/esp/components/angular-ui-bootstrap/client/lib/angular-ui-bootstrap/ui-bootstrap-tpls.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/angular-ui-bootstrap"
@@ -2341,6 +2437,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/bootstrap/client/lib/bootstrap/less/wells.less $(BIT_VAPP_PREFIX)/esp/components/bootstrap/client/lib/bootstrap/less/wells.less
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/bootstrap"
 	cp src/esp/proto/components/bootstrap/config.json $(BIT_VAPP_PREFIX)/esp/components/bootstrap/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/d3/client/lib/d3"
 	cp src/esp/proto/components/d3/client/lib/d3/d3.v3.js $(BIT_VAPP_PREFIX)/esp/components/d3/client/lib/d3/d3.v3.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/d3"
@@ -2366,6 +2463,8 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/flot/client/lib/flot/jquery.js $(BIT_VAPP_PREFIX)/esp/components/flot/client/lib/flot/jquery.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/flot"
 	cp src/esp/proto/components/flot/config.json $(BIT_VAPP_PREFIX)/esp/components/flot/config.json
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/css"
 	cp src/esp/proto/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.css $(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.css
 	cp src/esp/proto/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.min.css $(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/css/font-awesome-ie7.min.css
@@ -2399,6 +2498,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/font-awesome/client/lib/font-awesome/scss/font-awesome.scss $(BIT_VAPP_PREFIX)/esp/components/font-awesome/client/lib/font-awesome/scss/font-awesome.scss
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/font-awesome"
 	cp src/esp/proto/components/font-awesome/config.json $(BIT_VAPP_PREFIX)/esp/components/font-awesome/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html-mvc/client/app"
 	cp src/esp/proto/components/html-mvc/client/app/main.js $(BIT_VAPP_PREFIX)/esp/components/html-mvc/client/app/main.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html-mvc/client/css"
@@ -2413,6 +2513,8 @@ ifeq ($(BIT_PACK_ESP),1)
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html-mvc"
 	cp src/esp/proto/components/html-mvc/config.json $(BIT_VAPP_PREFIX)/esp/components/html-mvc/config.json
 	cp src/esp/proto/components/html-mvc/start.bit $(BIT_VAPP_PREFIX)/esp/components/html-mvc/start.bit
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html5shiv/client/lib/html5shiv"
 	cp src/esp/proto/components/html5shiv/client/lib/html5shiv/html5shiv.js $(BIT_VAPP_PREFIX)/esp/components/html5shiv/client/lib/html5shiv/html5shiv.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/html5shiv"
@@ -2459,12 +2561,15 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/normalize/client/css/normalize.less $(BIT_VAPP_PREFIX)/esp/components/normalize/client/css/normalize.less
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/normalize"
 	cp src/esp/proto/components/normalize/config.json $(BIT_VAPP_PREFIX)/esp/components/normalize/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3"
 	cp src/esp/proto/components/nvd3/client/lib/nvd3/nv.d3.css $(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3/nv.d3.css
 	cp src/esp/proto/components/nvd3/client/lib/nvd3/nv.d3.js $(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3/nv.d3.js
 	cp src/esp/proto/components/nvd3/client/lib/nvd3/nv.d3.min.css $(BIT_VAPP_PREFIX)/esp/components/nvd3/client/lib/nvd3/nv.d3.min.css
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/nvd3"
 	cp src/esp/proto/components/nvd3/config.json $(BIT_VAPP_PREFIX)/esp/components/nvd3/config.json
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/respond/client/lib/respond"
 	cp src/esp/proto/components/respond/client/lib/respond/respond.js $(BIT_VAPP_PREFIX)/esp/components/respond/client/lib/respond/respond.js
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/respond"
@@ -2473,6 +2578,7 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/server/app.conf $(BIT_VAPP_PREFIX)/esp/components/server/app.conf
 	cp src/esp/proto/components/server/appweb.conf $(BIT_VAPP_PREFIX)/esp/components/server/appweb.conf
 	cp src/esp/proto/components/server/config.json $(BIT_VAPP_PREFIX)/esp/components/server/config.json
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/components/xcharts/client/lib/xcharts"
 	cp src/esp/proto/components/xcharts/client/lib/xcharts/xcharts.css $(BIT_VAPP_PREFIX)/esp/components/xcharts/client/lib/xcharts/xcharts.css
 	cp src/esp/proto/components/xcharts/client/lib/xcharts/xcharts.js $(BIT_VAPP_PREFIX)/esp/components/xcharts/client/lib/xcharts/xcharts.js
@@ -2481,15 +2587,21 @@ ifeq ($(BIT_PACK_ESP),1)
 	cp src/esp/proto/components/xcharts/config.json $(BIT_VAPP_PREFIX)/esp/components/xcharts/config.json
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/angular-mvc"
 	cp src/esp/proto/templates/angular-mvc/controller-singleton.c $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/controller-singleton.c
+=======
+	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/angular-mvc"
+>>>>>>> upstream/stable
 	cp src/esp/proto/templates/angular-mvc/controller.c $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/controller.c
 	cp src/esp/proto/templates/angular-mvc/controller.js $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/controller.js
 	cp src/esp/proto/templates/angular-mvc/edit.html $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/edit.html
 	cp src/esp/proto/templates/angular-mvc/list.html $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/list.html
 	cp src/esp/proto/templates/angular-mvc/model.js $(BIT_VAPP_PREFIX)/esp/templates/angular-mvc/model.js
+<<<<<<< HEAD
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/html-mvc"
 	cp src/esp/proto/templates/html-mvc/controller.c $(BIT_VAPP_PREFIX)/esp/templates/html-mvc/controller.c
 	cp src/esp/proto/templates/html-mvc/edit.esp $(BIT_VAPP_PREFIX)/esp/templates/html-mvc/edit.esp
 	cp src/esp/proto/templates/html-mvc/list.esp $(BIT_VAPP_PREFIX)/esp/templates/html-mvc/list.esp
+=======
+>>>>>>> upstream/stable
 	mkdir -p "$(BIT_VAPP_PREFIX)/esp/templates/legacy-mvc"
 	cp src/esp/proto/templates/legacy-mvc/controller.c $(BIT_VAPP_PREFIX)/esp/templates/legacy-mvc/controller.c
 	cp src/esp/proto/templates/legacy-mvc/edit.html $(BIT_VAPP_PREFIX)/esp/templates/legacy-mvc/edit.html

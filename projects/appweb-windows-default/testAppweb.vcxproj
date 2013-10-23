@@ -13,7 +13,11 @@
   </ItemDefinitionGroup>
 
   <PropertyGroup Label="Globals">
+<<<<<<< HEAD
     <ProjectGuid>{125c9085-1d6d-401a-b829-5845ad1f4d7f}</ProjectGuid>
+=======
+    <ProjectGuid>{c47902a7-72bb-43fb-a147-98f4cb1133df}</ProjectGuid>
+>>>>>>> upstream/stable
     <RootNamespace />
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -124,7 +128,11 @@ cd ..\projects\appweb-windows-default</Command>
 
 <ItemGroup>
   <ProjectReference Include="libappweb.vcxproj">
+<<<<<<< HEAD
   <Project>6f3faad3-bfea-4af7-b4d9-514e9e44ad75</Project>
+=======
+  <Project>f26c83ba-b70a-4123-97dd-0bc68b7e6b87</Project>
+>>>>>>> upstream/stable
   <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
   </ProjectReference>
 </ItemGroup>
